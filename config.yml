@@ -5,11 +5,11 @@ Log:
 DnsConfigPath: # ./dns.json  Path to dns config
 Nodes:
   -
-    PanelType: "SSpanel" # Panel type: SSpanel
+    PanelType: "V2board" # Panel type: SSpanel
     ApiConfig:
-      ApiHost: "https://www.sspanel.tk"
-      ApiKey: "sspanel.tk"
-      NodeID: 41
+      ApiHost: "https://ruguyun.com"
+      ApiKey: "123456123456123456"
+      NodeID: 1
       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan
       Timeout: 30 # Timeout for the api request, Default is 5 sec
       EnableVless: false # Enable Vless for V2ray Type, Prefer remote configuration
@@ -24,7 +24,11 @@ Nodes:
         CertFile: ./cert/node1.test.com.cert # Provided if the CertMode is file
         KeyFile: ./cert/node1.test.com.key
         Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
-        Email: test@me.com
+        Email: test@ruguyun.com
         DNSEnv: # DNS ENV option used by DNS provider
-          ALICLOUD_ACCESS_KEY: aaa
-          ALICLOUD_SECRET_KEY: bbb
+        # CLOUDFLARE_EMAIL= test@ruguyun.com \
+        # CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
+        # lego --email test@ruguyun.com --dns cloudflare --domains my.example.org run
+        # ALICLOUD_ACCESS_KEY: aaa
+        # ALICLOUD_SECRET_KEY: bbb
+          
