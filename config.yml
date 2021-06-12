@@ -26,37 +26,8 @@ Nodes:
         Provider: cloudflare # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
         Email: test@domain.com
         DNSEnv: # DNS ENV option used by DNS provider
-        # CLOUDFLARE_EMAIL= test@ruguyun.com \
-        # CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
-        # lego --email test@ruguyun.com --dns cloudflare --domains my.example.org run
-        ALICLOUD_ACCESS_KEY: aaa
-        ALICLOUD_SECRET_KEY: bbb
-
-  -
-    PanelType: "V2board" # Panel type: SSpanel
-    ApiConfig:
-      ApiHost: "https://domain.com"
-      ApiKey: "123456123456123456"
-      NodeID: 1
-      NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan
-      Timeout: 30 # Timeout for the api request, Default is 5 sec
-      EnableVless: false # Enable Vless for V2ray Type, Prefer remote configuration
-      EnableXTLS: false # Enable XTLS for V2ray and Trojan， Prefer remote configuration
-    ControllerConfig:
-      ListenIP: 0.0.0.0 # IP address you want to listen
-      UpdatePeriodic: 60 # Time to update the nodeinfo, how many sec.
-      EnableDNS: false # Enable custom DNS config, Please ensure that you set the dns.json well
-      CertConfig:
-        CertMode: dns # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "doamin.com" # Domain to cert
-        CertFile: ./root/.acme.sh/domain.com_ecc/domain.com.cer # Provided if the CertMode is file
-        KeyFile: ./root/.acme.sh/domain.com_ecc/domain.com.key
-        Provider: cloudflare # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
-        Email: test@domain.com
-        DNSEnv: # DNS ENV option used by DNS provider
         # CLOUDFLARE_EMAIL= test@domain.com \
         # CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
         # lego --email test@domain.com --dns cloudflare --domains domain.com run
         ALICLOUD_ACCESS_KEY: aaa
         ALICLOUD_SECRET_KEY: bbb
-          
