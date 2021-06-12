@@ -7,7 +7,7 @@ Nodes:
   -
     PanelType: "V2board" # Panel type: SSpanel
     ApiConfig:
-      ApiHost: "https://ruguyun.com"
+      ApiHost: "https://domain"
       ApiKey: "123456123456123456"
       NodeID: 1
       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan
