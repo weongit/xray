@@ -1,5 +1,5 @@
 Log:
-  Level: debug # Log level: none, error, warning, info, debug 
+  Level: none # Log level: none, error, warning, info, debug 
   AccessPath: # ./access.Log
   ErrorPath: # ./error.log
 DnsConfigPath: # ./dns.json  Path to dns config
@@ -7,9 +7,9 @@ Nodes:
   -
     PanelType: "V2board" # Panel type: SSpanel
     ApiConfig:
-      ApiHost: "https://dommain.com"
+      ApiHost: "https://123.com"
       ApiKey: "123"
-      NodeID: 1
+      NodeID: 7
       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan
       Timeout: 30 # Timeout for the api request, Default is 5 sec
       EnableVless: false # Enable Vless for V2ray Type, Prefer remote configuration
@@ -20,24 +20,24 @@ Nodes:
       EnableDNS: false # Enable custom DNS config, Please ensure that you set the dns.json well
       CertConfig:
         CertMode: dns # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "domain" # Domain to cert
-        CertFile: ./root/.acme.sh/domain_ecc/domain.cer # Provided if the CertMode is file
-        KeyFile: ./root/.acme.sh/domain_ecc/domain.key
+        CertDomain: "123" # Domain to cert
+        CertFile: ./root/.acme.sh/123_ecc/123.cer # Provided if the CertMode is file
+        KeyFile: ./root/.acme.sh/123_ecc/123.key
         Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
         Email: test@domain.com
         DNSEnv: # DNS ENV option used by DNS provider
-        # CLOUDFLARE_EMAIL= test@domain.com \
-        # CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
-        # lego --email test@domain.com --dns cloudflare --domains domain.com run
-        ALICLOUD_ACCESS_KEY: aaa
-        ALICLOUD_SECRET_KEY: bbb
-   -
+          ALICLOUD_ACCESS_KEY: aaa
+          ALICLOUD_SECRET_KEY: bbb
+        #  CLOUDFLARE_EMAIL= test@domain.com \
+        #  CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
+        #  lego --email test@domain.com --dns cloudflare --domains domain.com run
+  -
      PanelType: "V2board" # Panel type: SSpanel, V2board
      ApiConfig:
-       ApiHost: "http://domain.com"
+       ApiHost: "http://123.com"
        ApiKey: "123"
-       NodeID: 1
-       NodeType: Shadowsocks # Node type: V2ray, Shadowsocks, Trojan
+       NodeID: 7
+       NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan
        Timeout: 30 # Timeout for the api request
        EnableVless: false # Enable Vless for V2ray Type
        EnableXTLS: false # Enable XTLS for V2ray and Trojan
@@ -49,11 +49,14 @@ Nodes:
        EnableDNS: false # Use custom DNS config, Please ensure that you set the dns.json well
        CertConfig:
          CertMode: dns # Option about how to get certificate: none, file, http, dns
-         CertDomain: "domain" # Domain to cert
-        CertFile: ./root/.acme.sh/domain_ecc/domain.cer # Provided if the CertMode is file
-        KeyFile: ./root/.acme.sh/domain_ecc/domain.key
+         CertDomain: "123" # Domain to cert
+         CertFile: ./root/.acme.sh/123_ecc/123.cer # Provided if the CertMode is file
+         KeyFile: ./root/.acme.sh/123_ecc/123.key
          Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
          Email: test@me.com
          DNSEnv: # DNS ENV option used by DNS provider
            ALICLOUD_ACCESS_KEY: aaa
            ALICLOUD_SECRET_KEY: bbb
+		    #   CLOUDFLARE_EMAIL= test@domain.com \
+        #   CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
+        #   lego --email test@domain.com --dns cloudflare --domains domain.com run
