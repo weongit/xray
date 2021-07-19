@@ -26,11 +26,11 @@ Nodes:
         Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
         Email: test@domain.com
         DNSEnv: # DNS ENV option used by DNS provider
-          ALICLOUD_ACCESS_KEY: aaa
-          ALICLOUD_SECRET_KEY: bbb
-        #  CLOUDFLARE_EMAIL= test@domain.com \
-        #  CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
-        #  lego --email test@domain.com --dns cloudflare --domains domain.com run
+        #  ALICLOUD_ACCESS_KEY: aaa
+        #  ALICLOUD_SECRET_KEY: bbb
+          CLOUDFLARE_EMAIL= test@domain.com \
+          CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
+          lego --email test@domain.com --dns cloudflare --domains domain.com run
   -
      PanelType: "V2board" # Panel type: SSpanel, V2board
      ApiConfig:
@@ -55,8 +55,8 @@ Nodes:
          Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
          Email: test@me.com
          DNSEnv: # DNS ENV option used by DNS provider
-           ALICLOUD_ACCESS_KEY: aaa
-           ALICLOUD_SECRET_KEY: bbb
-        #   CLOUDFLARE_EMAIL= test@domain.com \
-        #   CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
-        #   lego --email test@domain.com --dns cloudflare --domains domain.com run
+         #  ALICLOUD_ACCESS_KEY: aaa
+         #  ALICLOUD_SECRET_KEY: bbb
+           CLOUDFLARE_EMAIL= test@domain.com \
+           CLOUDFLARE_API_KEY=b9841238feb165a84330febba8a83208921177bffe733 \
+           lego --email test@domain.com --dns cloudflare --domains domain.com run
