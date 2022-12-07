@@ -1,7 +1,7 @@
 version: '3'
 services: 
   xrayr: 
-    image: crackair/xrayr:latest
+    image: vxvv/xrayr:latest
     volumes:
       - ./config.yml:/etc/XrayR/config.yml 
       - ./dns.json:/etc/XrayR/dns.json 
